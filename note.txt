@@ -105,3 +105,17 @@
     });
   </script>
 </section>
+
+
+
+ <div
+  class="relative h-64 w-full bg-cover bg-center rounded-lg overflow-hidden text-black"
+  style="background-image: url('img/offer-1.png'); background-size: 100% 100%;"
+>
+  <div class="absolute inset-0 flex flex-col justify-center items-end pl-10 pr-10 py-2 text-right">
+    <h2 class="text-base font-bold font-quicksand transition-all duration-300 hover:-translate-y-1">
+      Enjoy 15% OFF for <br> all vegetable
+    </h2> 
+    <p class="text-sm">Go to supplier</p>
+  </div>
+</div>
