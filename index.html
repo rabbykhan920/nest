@@ -59,32 +59,49 @@
 
  
   <style>
-    .custom-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      background-color: white;
-      border-radius: 50%;
-      padding: 12px;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .custom-prev { left: -20px; }
-    .custom-next { right: -20px; }
+  /* Custom Navigation Buttons */
+  .custom-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 9999px; /* fully round */
+    padding: 12px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
 
-    .owl-carousel {
-      touch-action: pan-y;
-    }
+  .custom-nav:hover {
+    background-color: #f0f0f0;
+  }
 
-    .card {
-      padding: 20px;
-    }
-  </style>
+  .custom-prev {
+  left: -25px;
+}
 
+.custom-next {
+  right: -25px;
+}
+
+  /* Carousel wrapper */
+  .owl-carousel {
+    touch-action: pan-y;
+  }
+
+  /* Product Card */
+  .card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 0.75rem;
+  }
+</style>
   
 </head>
 <body>
+  
+ 
   
     <!-- header-start -->
     <header class="">
@@ -100,9 +117,9 @@
         <span class="mx-2 text-gray-300">|</span>
         <span class="cursor-pointer text-gray-400">My Account</span>
       </div>
-      <div class=" text-gray-500 py-2 px-4 flex items-center justify-center">
+      <div class=" text-gray-500 py-2  flex items-center justify-center lg:hidden">
         <p class="text-sm font-medium"><i class="fa-regular fa-bell"></i><span class="text-[#3BB77E]"> Ads</span> You will get 25% discount</p>
-        <button class="bg-transparent font-medium text-[#3BB77E] px-3 py-1 rounded text-sm">Shop Now</button>
+        <button class="bg-transparent font-medium text-[#3BB77E] py-1 rounded text-sm ">Shop Now</button>
       </div>
       <div class="flex items-center gap-4">
         <span>Need help? Call us: <strong  class="text-[#3BB77E]">+1800 900</strong></span>
@@ -124,7 +141,7 @@
   <div class="hidden lg:block w-full border-b-2 border-[#3BB77E] py-6">
     <div class="max-w-7xl mx-auto px-2 flex items-center justify-between gap-2">
       <!-- Logo -->
-     <a href="index.html"> <img src="img/logo.png" alt="Logo" class="xl:h-16 lg:h-10" /></a>
+     <a href="index.html"> <img src="img/logo.png" alt="Logo" class="xl:h-14 lg:h-10" /></a>
   
       <!-- Search Area -->
       <div class="flex items-stretch border border-[#3BB77E] rounded-md overflow-hidden flex-grow max-w-xl ml-2">
@@ -132,7 +149,7 @@
         <div class="relative">
             <button
               id="categoriesToggle"
-              class="font-quicksand px-3 py-2 flex items-center gap-2 bg-white h-full"
+              class="font-quicksand text-sm font-bold px-3 py-2 flex items-center gap-2 bg-white h-full"
             >
               All Categories
               <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -161,18 +178,18 @@
   
       <!-- Cart + Account -->
       <div class="flex items-center gap-4 ml-2 font-lato">
-        <button class="flex items-center gap-1 text-sm">
-          <i class="fa-solid fa-cart-shopping text-lg"></i> Cart
+        <button class="flex items-center gap-1 text-base text-gray-500 font-lato">
+          <i class="fa-solid fa-cart-shopping text-lg text-black"></i> Cart
         </button>
         <div class="relative">
-          <button id="accountToggle" class="flex items-center gap-1 text-sm">
-            <i class="fa-regular fa-user text-lg"></i> Account
+          <button id="accountToggle" class="flex items-center gap-1 text-base text-gray-500 font-lato">
+            <i class="fa-regular fa-user text-lg text-black"></i> Account
           </button>
           <div id="accountMenu" class="absolute hidden bg-white border z-10 mt-1 p-2 w-36">
-            <a href="#" class="flex items-center gap-2 px-2 py-1 hover:bg-gray-100">
+            <a href="#" class="flex items-center text-base text-gray-400 font-lato gap-2 px-2 py-1 hover:bg-gray-100">
               <i class="fa-solid fa-user"></i> Login
             </a>
-            <a href="#" class="flex items-center gap-2 px-2 py-1 hover:bg-gray-100">
+            <a href="#" class="flex items-center text-base text-gray-400 font-lato gap-2 px-2 py-1 hover:bg-gray-100">
               <i class="fa-solid fa-user-plus"></i> Register
             </a>
           </div>
@@ -397,12 +414,16 @@
     <div style="background-image: url(https://nest.apexcode.info/static/assets/imgs/banner/banner-11.png);" class="lg:w-1/3 w-full md:min-h-[400px] lg:min-h-[500px] flex items-stretch">
       <div class="card card-compact bg-base-100 shadow-md w-full">
         
-        <div class="card-body flex-grow flex flex-col p-4 ">
+        <div class="card-body flex-grow flex flex-col p-4 md:mt-14">
           <h2 class="md:text-4xl text-2xl font-black font-quicksand">selem <span class="text-[#3BB77E]">Save 17% on </span></h2>
 
           <h2 class="md:text-4xl text-2xl font-black font-quicksand text-[#3BB77E]">Oganic Juice</h2>
           <div class="card-actions justify-start md:mt-8 mt-4">
-            <button class="btn bg-[#3BB77E] text-white text-base font-semibold font-lato border-none hover:bg-[#32AE75]">Shop Now<i class="fa-solid fa-arrow-right"></i></button>
+            <button
+      class="md:mt-12 mt-6 bg-[#3BB77E] text-white text-sm font-semibold px-4 py-1 rounded-md transition-all duration-500 hover:bg-[#FDC040] hover:pr-8"
+    >
+      Shop Now <i class="fa-solid fa-arrow-right ml-2"></i>
+    </button>
           </div>
         </div>
       </div>
@@ -1346,7 +1367,153 @@ all Fresh items
       </div>
     </section>
      <!-- offer products -->
+     <!-- Daily Best Sells -->
      
+        <!-- <section class="px-4 py-10 max-w-7xl mx-auto"> -->
+
+      <!-- Heading -->
+
+      <!-- <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Best Deals for You</h2>
+        <p class="mt-2 text-gray-600">Explore our exclusive picks</p>
+      </div> -->
+
+      <!-- Static + Slider Layout -->
+
+      <!-- <div class="flex flex-col xl:flex-row gap-6 relative"> -->
+       
+        <!-- Static Card -->
+        <!-- <div class="w-full xl:w-[30%] h-[500px] bg-cover bg-center text-white rounded-xl p-8 flex flex-col justify-between" style="background-image: url('img/best-sell.png');">
+          <h2 class="text-3xl font-bold mb-4 leading-tight">Bring nature<br>into your<br>home</h2>
+          <button class="bg-white text-black font-semibold py-2 rounded hover:bg-gray-200 transition">Shop Now</button>
+        </div> -->
+
+        <!-- Slider with Buttons -->
+        <!-- <div class="w-full xl:w-[70%] relative"> -->
+          <!-- Arrows -->
+          <!-- <div class="custom-nav custom-prev flex items-center justify-center"><i class="fas fa-chevron-left"></i></div>
+          <div class="custom-nav custom-next flex items-center justify-center"><i class="fas fa-chevron-right"></i></div> -->
+
+          <!-- Owl Carousel -->
+          <!-- <div class="owl-carousel owl-theme"> -->
+            <!-- Card 1 -->
+            <!-- <div class="card border rounded-lg shadow hover:shadow-lg relative bg-white">
+              <div class="absolute top-0 left-0 z-10">
+                <div class="bg-[#F74B81] text-white text-xs font-semibold px-4 py-1 shadow-md rounded-r-full relative">
+                  Hot
+                  <div class="absolute -bottom-2 left-0 w-0 h-0 border-l-[10px] border-r-[10px] border-l-transparent border-r-transparent border-t-[10px] border-t-[#F74B81]"></div>
+                </div>
+              </div>
+              <figure class="overflow-hidden">
+                <img src="img/pp1.jpg" alt="product" class="transition-transform duration-300 hover:scale-105 w-full" />
+              </figure>
+              <div class="card-body">
+                <p class="text-sm text-gray-500">Food & Beverage</p>
+                <h2 class="font-bold text-base hover:text-[#3BB77E]">Organic Quinoa, Brown & Red Rice</h2>
+                <span class="text-sm text-yellow-400">★★★★★ (0)</span>
+                <p class="text-gray-500 text-sm">By <span class="text-[#3BB77E] hover:text-[#FDC040]">Hambger Hel</span></p>
+                <div class="flex items-center justify-between mt-4 flex-wrap gap-2">
+                  <div class="flex items-center">
+                    <h3 class="text-[#3BB77E] text-lg font-bold">USD 12.0</h3>
+                    <p class="text-sm text-gray-400 ml-2 font-semibold line-through">USD 15.0</p>
+                  </div>
+                  <button class="bg-[#DEF9EC] text-[#3BB77E] hover:bg-[#3BB77E] hover:text-white transition-all duration-300 px-3 py-1 rounded">
+                    <i class="fa-solid fa-eye"></i> View
+                  </button>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Card 2 -->
+            <!-- <div class="card border rounded-lg shadow hover:shadow-lg relative bg-white">
+              <div class="absolute top-0 left-0 z-10">
+                <div class="bg-[#3BB77E] text-white text-xs font-semibold px-4 py-1 shadow-md rounded-r-full relative">
+                  New
+                  <div class="absolute -bottom-2 left-0 w-0 h-0 border-l-[10px] border-r-[10px] border-l-transparent border-r-transparent border-t-[10px] border-t-[#3BB77E]"></div>
+                </div>
+              </div>
+              <figure class="overflow-hidden">
+                <img src="img/pp2.jpg" alt="product" class="transition-transform duration-300 hover:scale-105 w-full" />
+              </figure>
+              <div class="card-body">
+                <p class="text-sm text-gray-500">Beauty & Fragrances</p>
+                <h2 class="font-bold text-base hover:text-[#3BB77E]">Stuffed Alaskan Salmon</h2>
+                <span class="text-sm text-yellow-400">★★★☆☆ (2)</span>
+                <p class="text-gray-500 text-sm">By <span class="text-[#3BB77E] hover:text-[#FDC040]">Nature Food</span></p>
+                <div class="flex items-center justify-between mt-4 flex-wrap gap-2">
+                  <div class="flex items-center">
+                    <h3 class="text-[#3BB77E] text-lg font-bold">USD 17.0</h3>
+                    <p class="text-sm text-gray-400 ml-2 font-semibold line-through">USD 19.0</p>
+                  </div>
+                  <button class="bg-[#DEF9EC] text-[#3BB77E] hover:bg-[#3BB77E] hover:text-white transition-all duration-300 px-3 py-1 rounded">
+                    <i class="fa-solid fa-eye"></i> View
+                  </button>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Card 3 -->
+            <!-- <div class="card border rounded-lg shadow hover:shadow-lg relative bg-white">
+              <div class="absolute top-0 left-0 z-10">
+                <div class="bg-[#F74B81] text-white text-xs font-semibold px-4 py-1 shadow-md rounded-r-full relative">
+                  Hot
+                  <div class="absolute -bottom-2 left-0 w-0 h-0 border-l-[10px] border-r-[10px] border-l-transparent border-r-transparent border-t-[10px] border-t-[#F74B81]"></div>
+                </div>
+              </div>
+              <figure class="overflow-hidden">
+                <img src="img/pp3.jpg" alt="product" class="transition-transform duration-300 hover:scale-105 w-full" />
+              </figure>
+              <div class="card-body">
+                <p class="text-sm text-gray-500">Food & Beverage</p>
+                <h2 class="font-bold text-base hover:text-[#3BB77E]">Sweet & Salty Kettle Corn</h2>
+                <span class="text-sm text-yellow-400">★★★☆☆ (2)</span>
+                <p class="text-gray-500 text-sm">By <span class="text-[#3BB77E] hover:text-[#FDC040]">Hambger Hel</span></p>
+                <div class="flex items-center justify-between mt-4 flex-wrap gap-2">
+                  <div class="flex items-center">
+                    <h3 class="text-[#3BB77E] text-lg font-bold">USD 12.0</h3>
+                    <p class="text-sm text-gray-400 ml-2 font-semibold line-through">USD 15.0</p>
+                  </div>
+                  <button class="bg-[#DEF9EC] text-[#3BB77E] hover:bg-[#3BB77E] hover:text-white transition-all duration-300 px-3 py-1 rounded">
+                    <i class="fa-solid fa-eye"></i> View
+                  </button>
+                </div>
+              </div>
+            </div> -->
+
+            <!-- Add more cards if needed -->
+
+          <!-- </div> -->
+           <!-- End Owl Carousel -->
+        <!-- </div> -->
+      <!-- </div> -->
+    <!-- </section> -->
+
+  <!-- <script>
+$(function(){
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1280: { items: 4 }
+    }
+  });
+
+  $(".custom-next").click(function(){
+    owl.trigger("next.owl.carousel");
+  });
+
+  $(".custom-prev").click(function(){
+    owl.trigger("prev.owl.carousel");
+  });
+});
+</script> -->
+    
+     <!-- Daily Best Sells -->
 <!-- Deals Of The Day -->
       <section class="lg:my-18 md:my-12 my-6">
         <!-- heading -->
@@ -1412,7 +1579,7 @@ all Fresh items
         <!-- card-2 -->
       <div class="relative w-[300px] mx-auto mb-20 group">
   <!-- Image (No effect) -->
-  <img src="https://nest.apexcode.info/media/ads/deal-time/banner-6.png" alt="Card Image" class="w-full cursor-pointer h-auto rounded-lg shadow-lg">
+  <img src="https://nest.apexcode.info/media/ads/deal-time/banner-7.png" alt="Card Image" class="w-full cursor-pointer h-auto rounded-lg shadow-lg">
 
   <!-- Content Box -->
   <div class="absolute top-[92%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] bg-white p-4 rounded-lg shadow-lg z-10 transition-all duration-300 group-hover:-translate-y-[70%]">
@@ -1439,7 +1606,7 @@ all Fresh items
 
     <!-- Content Text -->
     <h3 class="text-base cursor-pointer font-bold font-quicksand hover:text-[#3BB77E] mb-1 text-left">
-      Perdue Simply Smart Organics Gluten Free
+      Signature Wood-Fired Mushroom and Caramelized
     </h3>
     <p class="text-sm text-gray-400 mb-4 text-left">
       By <span class="text-[#3BB77E] hover:text-[#FDC040]  cursor-pointer">selem</span>
@@ -1465,7 +1632,7 @@ all Fresh items
         <!-- card-3 -->
     <div class="relative w-[300px] mx-auto mb-20 group">
   <!-- Image (No effect) -->
-  <img src="https://nest.apexcode.info/media/ads/deal-time/banner-6.png" alt="Card Image" class="w-full cursor-pointer h-auto rounded-lg shadow-lg">
+  <img src="https://nest.apexcode.info/media/ads/deal-time/banner-5.png" alt="Card Image" class="w-full cursor-pointer h-auto rounded-lg shadow-lg">
 
   <!-- Content Box -->
   <div class="absolute top-[92%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] bg-white p-4 rounded-lg shadow-lg z-10 transition-all duration-300 group-hover:-translate-y-[70%]">
@@ -1492,7 +1659,7 @@ all Fresh items
 
     <!-- Content Text -->
     <h3 class="text-base cursor-pointer font-bold font-quicksand hover:text-[#3BB77E] mb-1 text-left">
-      Perdue Simply Smart Organics Gluten Free
+     Seeds of Change Organic Quinoa, Brown, & Red Rice
     </h3>
     <p class="text-sm text-gray-400 mb-4 text-left">
       By <span class="text-[#3BB77E] hover:text-[#FDC040]  cursor-pointer">selem</span>
@@ -1518,7 +1685,7 @@ all Fresh items
         <!-- card-4 -->
      <div class="relative w-[300px] mx-auto mb-20 group">
   <!-- Image (No effect) -->
-  <img src="https://nest.apexcode.info/media/ads/deal-time/banner-6.png" alt="Card Image" class="w-full cursor-pointer h-auto rounded-lg shadow-lg">
+  <img src="https://nest.apexcode.info/media/ads/deal-time/banner-8.png" alt="Card Image" class="w-full cursor-pointer h-auto rounded-lg shadow-lg">
 
   <!-- Content Box -->
   <div class="absolute top-[92%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[85%] bg-white p-4 rounded-lg shadow-lg z-10 transition-all duration-300 group-hover:-translate-y-[70%]">
@@ -1545,7 +1712,7 @@ all Fresh items
 
     <!-- Content Text -->
     <h3 class="text-base cursor-pointer font-bold font-quicksand hover:text-[#3BB77E] mb-1 text-left">
-      Perdue Simply Smart Organics Gluten Free
+      Simply Lemonade with Raspberry Juice
     </h3>
     <p class="text-sm text-gray-400 mb-4 text-left">
       By <span class="text-[#3BB77E] hover:text-[#FDC040]  cursor-pointer">selem</span>
@@ -1990,7 +2157,7 @@ all Fresh items
         <!-- card-1  -->
       <div class="max-w-sm bg-[#F4F6FA] rounded-lg py-8 px-3 flex items-center gap-6">
   <!-- Image -->
-  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-1.svg" alt="Card Image" class="w-14 h-14 rounded object-cover">
+  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-1.svg" alt="Card Image" class="w-14 h-14 rounded object-cover cursor-pointer">
 
   <!-- Content -->
   <div>
@@ -2004,7 +2171,7 @@ all Fresh items
         <!-- card-2  -->
          <div class="max-w-sm bg-[#F4F6FA] rounded-lg py-8 px-3 flex items-center gap-6">
   <!-- Image -->
-  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-2.svg" alt="Card Image" class="w-14 h-14 rounded object-cover">
+  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-2.svg" alt="Card Image" class="w-14 h-14 rounded object-cover cursor-pointer">
 
   <!-- Content -->
   <div>
@@ -2017,7 +2184,7 @@ all Fresh items
         <!-- card-3  -->
          <div class="max-w-sm bg-[#F4F6FA] rounded-lg py-8 px-3 flex items-center gap-6">
   <!-- Image -->
-  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-3.svg" alt="Card Image" class="w-14 h-14 rounded object-cover">
+  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-3.svg" alt="Card Image" class="w-14 h-14 rounded object-cover cursor-pointer">
 
   <!-- Content -->
   <div>
@@ -2030,7 +2197,7 @@ all Fresh items
         <!-- card-4  -->
          <div class="max-w-sm bg-[#F4F6FA] rounded-lg py-8 px-3 flex items-center gap-6">
   <!-- Image -->
-  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-4.svg" alt="Card Image" class="w-14 h-14 rounded object-cover">
+  <img src="https://nest.apexcode.info/static/assets/imgs/theme/icons/icon-4.svg" alt="Card Image" class="w-14 h-14 rounded object-cover cursor-pointer">
 
   <!-- Content -->
   <div>
@@ -2067,58 +2234,58 @@ all Fresh items
       <img src="img/logo.png" alt="">
     </div>
     <p>
-     <span class="font-bold"><i class="fa-solid fa-location-dot text-[#3BB77E] mr-1"></i> Address:</span> 205 North Michigan Avenue, <br> Suite 810 Chicago, 60601, USA
+     <span class="font-bold"><i class="fa-solid fa-location-dot text-[#3BB77E] mr-1 cursor-pointer"></i> Address:</span> 205 North Michigan Avenue, <br> Suite 810 Chicago, 60601, USA
     </p>
 
     <p>
-      <span class="font-bold"><i class="fa-solid fa-headphones text-[#3BB77E] mr-2"></i>Call Us:</span>(123) 456-7890
+      <span class="font-bold"><i class="fa-solid fa-headphones text-[#3BB77E] mr-2 cursor-pointer"></i>Call Us:</span>(123) 456-7890
     </p>  
     
     <p>
-      <span class="font-bold"><i class="fa-regular fa-paper-plane text-[#3BB77E] mr-2"></i>Email:</span>contact@Evara.com
+      <span class="font-bold"><i class="fa-regular fa-paper-plane text-[#3BB77E] mr-2 cursor-pointer"></i>Email:</span>contact@Evara.com
     </p>  
     
     <p>
-      <span class="font-bold"><i class="fa-regular fa-clock text-[#3BB77E] mr-2"></i>Hours:</span>10:00 - 18:00, Mon - Sat
+      <span class="font-bold"><i class="fa-regular fa-clock text-[#3BB77E] mr-2 cursor-pointer"></i>Hours:</span>10:00 - 18:00, Mon - Sat
     </p>  
 
     
   </aside>
   <nav>
     <h6 class="md:text-2xl text-xl font-quicksand font-bold">Company</h6>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">About Us</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Terms Of Service</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Refund Policy</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">About Us</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Terms Of Service</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Refund Policy</a>
   </nav>
   <nav>
     <h6 class="md:text-2xl text-xl font-quicksand font-bold">Company</h6>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Pages</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Become a Vendor</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Vendor Login</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Contact Us</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Pages</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Become a Vendor</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Vendor Login</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Contact Us</a>
   </nav>
   <nav>
     <h6 class="md:text-2xl text-xl font-quicksand font-bold">Categories</h6>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Food & Beverage</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Beauty & Fragrances</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block"> Office & Stationery</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Consumer Electronics</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Fashion & Accessories</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Home & Furniture</a>
-    <a class="transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Health & Personal Care</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Food & Beverage</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Beauty & Fragrances</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block"> Office & Stationery</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Consumer Electronics</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Fashion & Accessories</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Home & Furniture</a>
+    <a class="cursor-pointer transition-all duration-300 hover:text-[#3BB77E] hover:ml-2 block">Health & Personal Care</a>
   </nav>
  <aside>
   <h2 class="md:text-2xl text-xl font-quicksand font-bold">Install App</h2>
   <p class="text-sm text-gray-400">From App Store or Google Play</p>   
   
   <div class="flex">
-    <img class="xl:w-32 lg:w-28 md:w-14 w-16" src="https://nest.apexcode.info/static/assets/imgs/theme/app-store.jpg" alt="">
-    <img class="xl:w-32 lg:w-28 md:w-14 w-16" src="https://nest.apexcode.info/static/assets/imgs/theme/google-play.jpg" alt="">
+    <img class="xl:w-32 lg:w-28 md:w-14 w-16 cursor-pointer" src="https://nest.apexcode.info/static/assets/imgs/theme/app-store.jpg" alt="">
+    <img class="xl:w-32 lg:w-28 md:w-14 w-16 cursor-pointer" src="https://nest.apexcode.info/static/assets/imgs/theme/google-play.jpg" alt="">
   </div>
   <p class="text-sm text-gray-400 mt-4">Secured Payment Gateways</p>
 
   <div class="mt-4">
-    <img class="w-40" src="https://nest.apexcode.info/static/assets/imgs/theme/payment-method.png" alt="">
+    <img class="w-40 cursor-pointer" src="https://nest.apexcode.info/static/assets/imgs/theme/payment-method.png" alt="">
   </div>
 </aside>
    
@@ -2154,16 +2321,16 @@ all Fresh items
     <div class="flex items-center justify-center md:justify-end gap-4">
       <h3 class="text-lg font-semibold font-quicksand">Follow Us</h3>
       <div class="flex gap-2">
-  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center">
+  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center cursor-pointer">
     <i class="fa-brands fa-facebook-f text-[10px]"></i>
   </div>
-  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center">
+  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center cursor-pointer">
     <i class="fa-brands fa-twitter text-[10px]"></i>
   </div>
-  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center">
+  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center cursor-pointer">
     <i class="fa-brands fa-instagram text-[10px]"></i>
   </div>
-  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center">
+  <div class="w-7 h-7 bg-[#3BB77E] text-white rounded-full flex items-center justify-center cursor-pointer">
     <i class="fa-brands fa-pinterest text-[10px]"></i>
   </div>
 </div>
@@ -2174,5 +2341,6 @@ all Fresh items
 </section>
 
        <!-- footer ending -->
+ 
 </body>
 </html>
